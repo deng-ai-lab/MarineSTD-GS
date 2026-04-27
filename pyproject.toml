@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marinestd-gs"
+version = "0.1.0"
+description = "MarineSTD-GS: Spatiotemporal Degradation-Aware 3D Gaussian Splatting for Realistic Underwater Scene Reconstruction"
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "nerfstudio==1.1.5",
+    "numpy<2",
+]
+
+[project.urls]
+Homepage = "https://marinestd-gs.github.io"
+Repository = "https://github.com/deng-ai-lab/MarineSTD-GS"
+
+[tool.setuptools.packages.find]
+include = ["marinestd_gs*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+marinestd-gs = "marinestd_gs.marinestd_config:MarineSTDGsMethod"
+
+[project.scripts]
+ns-marinestd-render = "marinestd_gs.marinestd_render:entrypoint"

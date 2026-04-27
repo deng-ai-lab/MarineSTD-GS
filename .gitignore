@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local assistant notes and temporary backups
+AGENTS.md
+*.bak
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local outputs and experiment artifacts
+outputs/
+render_results/
+wandb/
+runs/
+
+# Model and render artifacts
+*.ckpt
+*.pth
+*.pt
+*.npy
+*.npz
+*.gz
+
+# Local datasets
+data/
+
+# Local build artifacts for the bundled gsplat copy
+third_party/gsplat/build/
+third_party/gsplat/**/__pycache__/
+third_party/gsplat/**/*.pyc
+third_party/gsplat/**/*.pyo
+third_party/gsplat/**/*.so
+third_party/gsplat/**/*.o
