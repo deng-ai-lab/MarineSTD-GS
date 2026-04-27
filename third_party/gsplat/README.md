@@ -1,32 +1,18 @@
-# Modified gsplat for MarineSTD-GS
+# gsplat for MarineSTD-GS
 
-This directory contains a **method-specific modified version derived from gsplat 1.4.0** for reproducing **MarineSTD-GS**.
+This directory contains the `gsplat 1.4.0` dependency used by MarineSTD-GS.
 
-Compared with the upstream gsplat release, this version includes method-specific modifications required by MarineSTD-GS. In particular, we modify the Gaussian refinement strategy in:
+The MarineSTD-GS changes are mainly in:
 
 - `gsplat/strategy/default.py`
 
-The modified refinement strategy is a method-specific adjustment used by
-MarineSTD-GS. Its design was developed with reference to prior underwater and
-opacity-aware Gaussian-splatting methods, including WaterSplatting and
-Gaussian Opacity Fields.
-
-This copy is provided **only for reproducing MarineSTD-GS** and should **not** be treated as the official upstream gsplat package.
+The refinement changes were developed for MarineSTD-GS with reference to prior
+underwater and opacity-aware Gaussian splatting methods, including
+WaterSplatting and Gaussian Opacity Fields.
 
 ## Installation
 
-**Dependency:** Please install [PyTorch](https://pytorch.org/get-started/locally/) first.
-
-This modified gsplat is intended to be installed **locally from source**.
-
-From the root directory of MarineSTD-GS, run:
-
-```bash
-cd third_party/gsplat
-pip install -e .
-```
-
-If an official version of `gsplat` was automatically installed together with Nerfstudio, we recommend removing it first:
+Install this version from source:
 
 ```bash
 pip uninstall -y gsplat
@@ -34,20 +20,11 @@ cd third_party/gsplat
 pip install -e .
 ```
 
-## Notes
-
-- This is a **method-specific modified version** of **gsplat 1.4.0** used by MarineSTD-GS.
-- It is **not** the official release from the gsplat authors.
-- Please avoid mixing this local version with another pip-installed version of gsplat in the same environment.
-- The primary purpose of this directory is to provide a reproducible dependency for MarineSTD-GS.
+Please avoid mixing this local copy with another pip-installed version of `gsplat` in the same environment.
 
 ## Upstream Project
 
-The original gsplat project is an open-source library for CUDA-accelerated rasterization of gaussians with Python bindings. It is inspired by the SIGGRAPH paper:
-
-- [3D Gaussian Splatting for Real-Time Rendering of Radiance Fields](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/)
-
-The upstream gsplat project is available at:
+Upstream repository:
 
 - [https://github.com/nerfstudio-project/gsplat](https://github.com/nerfstudio-project/gsplat)
 

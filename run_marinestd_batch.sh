@@ -31,9 +31,6 @@ scene_list=(
     "Simulated_Dataset/S2-A-High"
     "Simulated_Dataset/S2-B-Med"
     "Simulated_Dataset/S2-C-Med"
-    # "mmSynthetic/M3_3"
-    # "mmSynthetic/M4_3"
-    # "mmSynthetic/D4_3"
 )
 
 EXP_TAG="watch50_sh0/3stage_100_l1_womul_nega10000_depth_adadtv_1e_2_encode_bg"
